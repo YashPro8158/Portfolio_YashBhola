@@ -1,0 +1,741 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#container {
+    width: 99%;
+    height: auto;
+    margin: auto;
+}
+
+.right-container {
+    width: calc(100%-300px);
+    height: auto;
+    margin: 0px 0px 0px 300px;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+.side-nav {
+    width: 300px;
+    height: 100vh;
+    background-color: #f2f3f7;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    /* display: none; */
+}
+
+.side-nav .top-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.side-nav .img-about {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    margin: 0px 0px 20px 0px;
+}
+
+.side-nav .content-top {
+    text-align: center;
+}
+
+.side-nav .img-about img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.side-nav .content-top h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0px 0px 20px 0px;
+}
+
+.clr-blue {
+    color: #3498db;
+}
+
+.side-nav .content-top p {
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: bolder;
+    margin: 0px 0px 20px 0px;
+}
+
+.side-nav .menulist {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-nav .menulist ul {
+    list-style: none;
+    text-align: center;
+}
+
+.side-nav .menulist ul li {
+    padding: 10px;
+}
+
+.side-nav .menulist ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1.3px;
+    color: #2c3e50;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.side-nav .menulist ul li a:hover {
+    letter-spacing: 2px;
+    color: #3498db;
+    transition: all 0.3s ease;
+}
+
+.side-nav .menulist ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 100%;
+    left: 0%;
+    background-color: #3498db;
+    transition: all 0.3s ease;
+    transform: scale(0);
+
+}
+
+.side-nav .menulist ul li a:hover:after {
+    transform: scale(1);
+    transition: all 0.3s ease;
+
+}
+
+.nav-copyright h3 {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* HERO  */
+.hero {
+    width: 100%;
+    height: 85vh;
+    color: black;
+    position: relative;
+    background-image: url("/image/header-back.jpeg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hamburger {
+    display: none;
+}
+
+.hero .text-box {
+    width: 100%;
+    height: 70vh;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+.hero .text-box h2 {
+    font-size: 5em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hero .text-box P {
+    font-size: 1.5em;
+    margin: 20px 0px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.hero .text-box button {
+    background: none;
+    outline: none;
+    border: none;
+    text-align: center;
+    padding: 8px 30px;
+    border: 1px solid white;
+    margin: 10px 0px 0px 0px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+.hero .text-box button i {
+    transition: all 0.3s ease-in-out;
+}
+
+.hero .text-box button:hover i {
+    transform: translateX(20px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* about  */
+#about {
+    width: 100%;
+    height: auto;
+    padding: 7em 10px 0px 20px;
+}
+
+.top-about {
+    width: 100%;
+    height: 15vh;
+}
+
+.top-headings>h2 {
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(0, 0, 0, 0.4);
+    margin: 10px;
+}
+
+.top-headings>h3 {
+    font-size: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 10px;
+}
+
+#about p {
+    font-size: 16px;
+    line-height: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: justify;
+}
+
+.skill-area {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.skill-area .skills {
+    cursor: pointer;
+    width: 25%;
+    height: 150px;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.skill-area .skills i {
+    font-size: 30px;
+    margin: 20px;
+}
+
+.skill-area .skills h2 {
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.skill-area .skills p {
+    font-size: 16px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.4);
+    padding: 10px 4px;
+    width: 100%;
+    text-align: justify;
+}
+
+.skill-area .skills:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+}
+
+.happyclients {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4); */
+    background: #ff7f50;
+    border-radius: 20px;
+}
+
+.happyclients h3 {
+    width: 50%;
+    line-height: 58px;
+    font-size: 32px;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+.happyclients button {
+    margin: 20px 0px 20px 0px;
+    font-size: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    background: none;
+    outline: none;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.happyclients button:hover {
+    color: white;
+    box-shadow: 0px 0px 10px #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* services */
+#services {
+
+    padding: 7em 10px 0px 20px;
+}
+
+.skill-area .services {
+    position: relative;
+    width: 30%;
+    padding: 13px;
+    height: auto;
+}
+
+.top-headings {
+    margin: 30px 0px 0px 0px;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+
+
+/* Skills  */
+
+#skills {
+    width: 100%;
+    height: auto;
+    padding: 7em 10px 4em 20px;
+}
+
+#skills .progress-skills {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#skills .progress-skills .skill h2 {
+    font-size: 17px;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 10px 0px;
+    font-weight: 200;
+}
+
+#skills .paragraphskill {
+    width: 100%;
+    padding: 4em 10px 4em 10px;
+}
+
+#skills .paragraphskill p {
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 34px;
+}
+
+#skills .progress-skills .skill {
+    width: 40%;
+    height: auto;
+    padding: 10px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+#skills .progress-skills .skill::after {
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+#skills .progress-skills .htmlskill::after {
+    content: "80%";
+    position: absolute;
+    left: 78%;
+    bottom: -11%;
+    color: #ff7f50;
+}
+
+#skills .progress-skills .skill .pagination {
+    position: relative;
+    width: 100%;
+    height: 8px;
+    border-radius: 10px;
+    background-color: #ced6e0;
+}
+
+#skills .progress-skills .htmlskill .pagination::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #ff7f50;
+}
+
+
+#skills .progress-skills .photoshopskill .pagination::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #ff4757;
+}
+
+
+#skills .progress-skills .photoshopskill::after {
+    content: "60%";
+    position: absolute;
+    left: 58%;
+    bottom: -13%;
+    color: #ff4757;
+}
+
+
+
+#skills .progress-skills .jqueryskill .pagination::after {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #2f3542;
+}
+
+
+#skills .progress-skills .jqueryskill::after {
+    content: "70%";
+    position: absolute;
+    left: 68%;
+    bottom: -13%;
+    color: #2f3542;
+}
+
+
+
+
+#skills .progress-skills .wordpresskill .pagination::after {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #7bed9f;
+}
+
+
+#skills .progress-skills .wordpresskill::after {
+    content: "90%";
+    position: absolute;
+    left: 88%;
+    bottom: -13%;
+    color: #7bed9f;
+}
+
+
+
+#skills .progress-skills .cssskill .pagination::after {
+    content: "";
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #3742fa;
+}
+
+#skills .progress-skills .cssskill::after {
+    content: "85%";
+    position: absolute;
+    left: 83%;
+    bottom: -13%;
+    color: #3742fa;
+}
+
+
+#skills .progress-skills .seoskill .pagination::after {
+    content: "";
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #ffa502;
+}
+
+
+#skills .progress-skills .seoskill::after {
+    content: "65%";
+    position: absolute;
+    left: 63%;
+    bottom: -13%;
+    color: #ffa502;
+}
+
+/* Work */
+
+.projects {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 3em 10px 3em 10px;
+}
+
+.projects .pr-img {
+    width: 45%;
+    height: 500px;
+    position: relative;
+    margin: 10px;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out;
+    border-radius: 10px;
+}
+
+.projects .pr-img:hover {
+    box-shadow: 0px 0px 34px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.projects .pr-img img {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+.projects .pr-img .overlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 62, 80, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    border-radius: 10px;
+}
+
+.projects .pr-img:hover .overlay {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+}
+
+.projects .pr-img .overlay .content {
+    width: 80%;
+    margin: 0px auto;
+    border: 2px solid white;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.projects .pr-img .overlay h2 {
+    font-size: 2.6em;
+    margin: 20px 10px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.projects .pr-img .overlay p {
+    font-size: 24px;
+    color: white;
+}
+
+.contact-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-list .list-ct {
+    width: 35%;
+    height: 300px;
+    padding: 20px 15px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.contact-list .list-ct i {
+    font-size: 34px;
+    background-color: #2c3e50;
+    padding: 30px;
+    border-radius: 50%;
+    color: white;
+}
+
+.contact-list .list-ct h2 {
+    font-size: 2.3em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #34495e;
+}
+
+.contact-list .list-ct p {
+    font-size: 1.3em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contact-list .list-ct i,
+.contact-list .list-ct h2,
+.contact-list .list-ct p {
+    margin: 10px 0px;
+}
+
+.formstart {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 3em 10px;
+}
+.formstart .img{
+    width: 30%;
+    height: 600px;
+    position: relative;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+}
+.formstart .img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.formstart form {
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formstart form input {
+    width: 60%;
+    height: 45px;
+    font-size: 23px;
+    padding: 35px 15px;
+    margin: 10px 0px;
+    border: none;
+    background: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease-in-out;
+    border: 1px solid transparent;
+}
+
+.formstart form input:focus {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    border: 1px solid black;
+    transition: all 0.4s ease-in-out;
+}
+
+.formstart form input::placeholder {
+    font-size: 23px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.formstart form textarea {
+    width: 60%;
+    font-size: 23px;
+    padding: 35px 15px;
+    margin: 10px 0px;
+    border: none;
+    background: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease-in-out;
+    border: 1px solid transparent;
+}
+
+.formstart form textarea:focus {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    border: 1px solid black;
+    transition: all 0.4s ease-in-out;
+}
+
+.formstart form button {
+    width: 55%;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1.6em;
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.formstart form button:hover{
+    box-shadow:0px 0px 14px rgba(44, 62, 80,1.0) ;
+    transition: all 0.4s ease-in-out;
+}
