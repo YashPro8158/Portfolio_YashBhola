@@ -158,6 +158,48 @@ html {
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
 }
+.hero  .bottomclick {
+    position: absolute;
+    bottom: 20px;
+    width: 50px;
+    height: 70px;
+    border: 1px solid white;
+    left: 40%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10000;
+    animation: bounce infinite 1s;
+    transition: 1s ease-in-out;
+}
+@keyframes bounce {
+    0%{
+        bottom: 20px;
+        transition: 1s ease-in-out;
+    }
+    25%{
+        bottom: 15px;
+        transition: 1s ease-in-out;
+    }
+    50%{
+        bottom: 10px;
+        transition: 1s ease-in-out;
+    }
+    75%{
+        bottom: 7px;
+        transition: 1s ease-in-out;
+    }
+    100%{
+        bottom: 0px;
+        transition: 1s ease-in-out;
+    }
+}
+.hero  .bottomclick a{
+    font-size: 20px;
+    color: white;
+}
 
 .hamburger {
     display: none;
@@ -601,6 +643,19 @@ html {
     font-size: 24px;
     color: white;
 }
+.projects .pr-img .overlay button{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px 15px;
+    border: none;
+    margin: 10px;
+    background: none;
+    outline: none;
+    border: 2px solid white;
+    cursor: pointer;
+}
 
 .contact-list {
     width: 100%;
@@ -738,4 +793,21 @@ html {
 .formstart form button:hover{
     box-shadow:0px 0px 14px rgba(44, 62, 80,1.0) ;
     transition: all 0.4s ease-in-out;
+}
+
+.container-black{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+}
+#soon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 8em;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: underline;
 }
